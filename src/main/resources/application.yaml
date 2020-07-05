@@ -6,7 +6,6 @@ spring:
     hibernate:
       ddl-auto: create-drop
   datasource:
-    platform: postgres
     url: ${JDBC_DATABASE_URL}
     username: ${JDBC_DATABASE_USERNAME}
     password: ${JDBC_DATABASE_PASSWORD}
