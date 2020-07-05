@@ -4,7 +4,7 @@ spring:
       ddl-auto: create-drop
   datasource:
     platform: postgres
-    url: jdbc:postgresql://SPRING_DATASOURCE_URL:5432/d1plk4cqe41a4m
-    username: SPRING_DATASOURCE_USERNAME
-    password: SPRING_DATASOURCE_PASSWORD
+    url: jdbc:${SPRING_DATASOURCE_URL}
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
     driverClassName: org.postgresql.Driver
