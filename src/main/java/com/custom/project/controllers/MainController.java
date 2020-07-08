@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 
-    @Value("${project.name}")
+    @Value("${project.name:not found}")
     private String projectName;
 
     @GetMapping("test")
