@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: my-custom-project
+  cloud:
+    config:
+      uri: http://my-custom-project2.herokuapp.com:8080
