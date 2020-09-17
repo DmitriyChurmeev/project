@@ -9,5 +9,5 @@ public class TestRequest {
 
     private Long id;
 
-    private Map<String, String> params;
+    private Map<String, Object> params;
 }
