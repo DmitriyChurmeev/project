@@ -17,12 +17,9 @@ public class HomeController {
     @RequestMapping(value = "/test/{formId}")
     public String index(@RequestBody TestRequest o, @PathVariable("formId") Object formId) {
         log.error("request from yandex form");
-        Map map = new ObjectMapper().convertValue(o, Map.class);
-        log.error(map.toString());
-        log.error("------------");
-        log.error(o.getParams().toString());
         log.error("!!!!");
-        log.error(o.getParams().get("result").toString());
+        String result = o.getParams().get("result").toString();
+        log.error(new ObjectMapper().convertValue(result, Map.class).get("ФИО").toString());
 
         return "index";
     }
