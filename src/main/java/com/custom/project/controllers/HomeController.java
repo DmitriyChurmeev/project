@@ -7,6 +7,7 @@ import org.springframework.http.RequestEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 @Slf4j
@@ -18,8 +19,9 @@ public class HomeController {
     public String index(@RequestBody TestRequest o, @PathVariable("formId") Object formId) {
         log.error("request from yandex form");
         log.error("!!!!");
-        String result = o.getParams().get("result").toString();
-        log.error(new ObjectMapper().convertValue(result, Map.class).get("ФИО").toString());
+        LinkedHashMap result = (LinkedHashMap) o.getParams().get("result");
+        log.error(result.get("ФИО").toString());
+        log.error(result.get("Комментарий").toString());
 
         return "index";
     }
