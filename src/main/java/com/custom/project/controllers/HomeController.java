@@ -11,9 +11,6 @@ import java.util.Map;
 
 @Slf4j
 @RestController
-@RequestMapping(
-        consumes = MediaType.APPLICATION_JSON_VALUE,
-        produces = MediaType.APPLICATION_JSON_VALUE)
 public class HomeController {
 
     @PostMapping
