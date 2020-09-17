@@ -13,7 +13,7 @@ public class HomeController {
 
     @PostMapping
     @RequestMapping(value = "/test/{formId}")
-    public String index(@RequestBody Object o, @PathVariable("formId") long formId) {
+    public String index(@RequestBody Object o, @PathVariable("formId") String formId) {
         log.error("request from yandex form");
         log.error(o.toString());
         Map map = new ObjectMapper().convertValue(o, Map.class);
