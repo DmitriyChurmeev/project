@@ -15,10 +15,8 @@ public class HomeController {
 
     @PostMapping
     @RequestMapping(value = "/test/{formId}")
-    public String index(@RequestBody Object o, @PathVariable("formId") Object formId) {
+    public String index(@RequestBody Map<String, String> o, @PathVariable("formId") Object formId) {
         log.error("request from yandex form");
-        Map map = new ObjectMapper().convertValue(o, Map.class);
-        log.error(map.toString());
         log.error(o.toString());
         return "index";
     }
