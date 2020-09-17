@@ -22,8 +22,7 @@ public class HomeController {
         log.error("------------");
         log.error(o.getParams().toString());
         log.error("!!!!");
-        log.error(o.getParams().get("Комментарий"));
-        log.error(o.getParams().get("ФИО"));
+        log.error(o.getParams().keySet().toString());
 
         return "index";
     }
