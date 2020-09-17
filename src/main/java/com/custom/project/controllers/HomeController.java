@@ -22,10 +22,7 @@ public class HomeController {
         log.error("------------");
         log.error(o.getParams().toString());
         log.error("!!!!");
-        Map<String, String> result = (Map<String, String>) (o.getParams()).get("result");
-        log.error(result.toString());
-        log.error("------------2");
-        log.error(result.get("Комментарий").toString());
+        log.error(o.getParams().get("result").toString());
 
         return "index";
     }
