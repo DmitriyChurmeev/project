@@ -20,6 +20,8 @@ repositories {
 
 
 
+
+
 ext {
 	set('springCloudVersion', "Hoxton.SR6")
 }
