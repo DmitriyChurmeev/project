@@ -14,7 +14,6 @@ public class HomeController {
     @PostMapping
     @RequestMapping(value = "/test/{formId}")
     public String index(@RequestBody TestRequest o, @PathVariable("formId") Object formId) {
-
         return "index";
     }
 
