@@ -18,8 +18,12 @@ repositories {
 	mavenCentral()
 }
 
+
+
+
+
 ext {
-	  set('springCloudVersion', "Hoxton.SR6")
+	set('springCloudVersion', "Hoxton.SR6")
 }
 
 dependencies {
